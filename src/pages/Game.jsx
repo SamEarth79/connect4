@@ -29,7 +29,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 updatedBoard[r][i + 2] === updatedBoard[r][i + 3] &&
                 updatedBoard[r][i + 3] === player
             ) {
-                return true;
+                return [true, [r, i], [r, i + 1], [r, i + 2], [r, i + 3]];
             }
         }
         // Vertical check
@@ -42,7 +42,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 updatedBoard[i + 2][c] === updatedBoard[i + 3][c] &&
                 updatedBoard[i + 3][c] === player
             ) {
-                return true;
+                return [true, [i, c], [i + 1, c], [i + 2, c], [i + 3, c]];
             }
         }
         // Diagonal check
@@ -55,7 +55,13 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 updatedBoard[i + 2][j + 2] === updatedBoard[i + 3][j + 3] &&
                 updatedBoard[i + 3][j + 3] === player
             ) {
-                return true;
+                return [
+                    true,
+                    [i, j],
+                    [i + 1, j + 1],
+                    [i + 2, j + 2],
+                    [i + 3, j + 3],
+                ];
             }
         }
 
@@ -71,15 +77,22 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 updatedBoard[i - 2][j + 2] === updatedBoard[i - 3][j + 3] &&
                 updatedBoard[i - 3][j + 3] === player
             ) {
-                return true;
+                return [
+                    true,
+                    [i, j],
+                    [i - 1, j + 1],
+                    [i - 2, j + 2],
+                    [i - 3, j + 3],
+                ];
             }
         }
+
+        return [false];
     };
 
-    const gsapAnimations = (playerTurn) => {
+    const gsapAnimations = (playerTurn, [status, ...coords]) => {
         let winPlayer = 1;
         if (playerTurn === -1) winPlayer = 2;
-
         document.querySelector(
             ".result"
         ).innerHTML = `Player ${winPlayer} wins`;
@@ -89,6 +102,17 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
             { y: -400, duration: 2, opacity: 0 },
             { y: 0, opacity: 1 }
         );
+
+        coords.forEach((coord) => {
+            let className = coord[1] + "" + coord[0];
+            console.log(className);
+            gsap.fromTo(`._${className}`, { y: 0, duration: 4 }, { y: -50 });
+            gsap.fromTo(
+                `._${className}`,
+                { y: -50, duration: 4 },
+                { y: 0, delay: 0.5 }
+            );
+        });
     };
 
     const modifyCell = async (indexY, playerTurn) => {
@@ -116,8 +140,9 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
         let foundWinner = false;
         for (let iy = 0; iy < boardXSize; iy++) {
             for (let ix = 0; ix < boardYSize; ix++) {
-                if (checkWinner(updatedBoard, iy, ix, playerTurn)) {
-                    gsapAnimations(playerTurn);
+                let result = checkWinner(updatedBoard, iy, ix, playerTurn);
+                if (result[0]) {
+                    gsapAnimations(playerTurn, result);
                     setDisable(true);
                     setTimeout(() => {
                         setBoard(initBoard);
@@ -195,7 +220,9 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                                     return (
                                         <div
                                             key={indexX + "" + indexY}
-                                            className={`${cellColor} aspect-square h-[3.5rem] m-[.8rem] rounded-full`}
+                                            className={`${cellColor} _${
+                                                indexX + "" + indexY
+                                            } aspect-square h-[3.5rem] m-[.8rem] rounded-full`}
                                         ></div>
                                     );
                                 })}

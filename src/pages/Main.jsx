@@ -53,7 +53,7 @@ const Main = () => {
             <div className="flex items-center gap-4 absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2">
                 <div className="flex gap-2 connect_parent">
                     <h1 className="connect text-[4.5rem] font-light translate-x-[5em]">
-                        Sansu 4
+                        Connect 4
                     </h1>
                 </div>
                 <div className="flex gap-2 dots">
