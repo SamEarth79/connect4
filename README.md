@@ -1,3 +1,5 @@
 ### A simple connect 4 app to pass time
 
-Connect 4 game
+https://samearth79.github.io/connect4/
+
+
