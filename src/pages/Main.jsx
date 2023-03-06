@@ -52,7 +52,7 @@ const Main = () => {
         <div className="flex flex-col items-center h-screen justify-end p-32 gap-10 relative">
             <div className="flex items-center gap-4 absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2">
                 <div className="flex gap-2 connect_parent">
-                    <h1 className="connect text-[4.5rem] font-light translate-x-[5em]">
+                    <h1 className="connect text-[4.5rem] font-light translate-x-[5em] max-sm:text-[2.5rem]">
                         Connect 4
                     </h1>
                 </div>
@@ -91,7 +91,8 @@ const Main = () => {
             </div>
             <div className="play-button">
                 <button
-                    className="border-2 border-black rounded-full p-5 aspect-square"
+                    className="border-2 border-black rounded-full p-5 aspect-square
+                    hover:bg-black hover:text-white"
                     onClick={() => {
                         setInGame(true);
                     }}

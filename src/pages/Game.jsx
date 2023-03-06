@@ -198,7 +198,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
         }
     };
     return (
-        <div>
+        <div className="h-screen flex flex-col justify-around">
             <Header setInGame={setInGame} />
             <div className="game-section">
                 <div className="board flex items-center justify-center border-2 rounded-lg p-4 w-fit mx-auto ">
@@ -222,7 +222,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                                             key={indexX + "" + indexY}
                                             className={`${cellColor} _${
                                                 indexX + "" + indexY
-                                            } aspect-square h-[3.5rem] m-[.8rem] rounded-full`}
+                                            } aspect-square h-[3.5rem] m-[.8rem] max-sm:h-[2.5rem] max-sm:m-[.5rem] rounded-full`}
                                         ></div>
                                     );
                                 })}
@@ -232,7 +232,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 </div>
             </div>
             <div className="Footer">
-                <div className="flex gap-20 justify-center items-center">
+                <div className="flex gap-20 max-sm:gap-10 justify-center items-center">
                     <div className="flex items-center">
                         <p className="text-xl font-semibold pl1 underline underline-offset-8">
                             {player1Name}
@@ -243,15 +243,6 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1 -mb-4">
                         <div className="result text-3xl font-bold transition-all duration-500"></div>
-                        <div className="flex flex-col items-center justify-center">
-                            {/* <BiRefresh
-                                className="text-4xl"
-                                onClick={() => {
-                                    setP1Score(0);
-                                    setP2Score(0);
-                                }}
-                            /> */}
-                        </div>
                     </div>
                     <div className="flex items-center">
                         <div className="bg-yellow-500 aspect-square h-[3.5rem] m-[.8rem] rounded-full flex justify-center items-center font-mono font-bold text-xl">
