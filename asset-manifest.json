@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/connect4/static/css/main.15fac25c.css",
+    "main.js": "/connect4/static/js/main.4ab072db.js",
+    "index.html": "/connect4/index.html",
+    "main.15fac25c.css.map": "/connect4/static/css/main.15fac25c.css.map",
+    "main.4ab072db.js.map": "/connect4/static/js/main.4ab072db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15fac25c.css",
+    "static/js/main.4ab072db.js"
+  ]
+}
