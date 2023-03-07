@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header = ({ setInGame }) => {
     return (
         <div className="p-10">
             {/* <Link to="/"> */}
             <div
-                className="logo flex max-sm:justify-center items-center gap-1"
+                className="logo flex max-sm:justify-center items-center gap-1 cursor-pointer"
                 onClick={() => {
                     setInGame(false);
                 }}

@@ -67,7 +67,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className="player-names flex flex-col gap-4">
+            <div className="player-names flex flex-col gap-4 items-center">
                 <input
                     type="text"
                     name=""
@@ -88,17 +88,16 @@ const Main = () => {
                     }}
                     className="p-4 border-[2px] border-yellow-500 rounded-full focus:outline-none"
                 />
-            </div>
-            <div className="play-button">
-                <button
-                    className="border-2 border-black rounded-full p-5 aspect-square
+                <div
+                    className="play-button border-2 mt-4 text-white text-2xl font-semibold tracking-[0.2rem] rounded-full p-3 w-full text-center bg-redyellow-pattern bg-[length:732px_753px] bg-no-repeat bg-[center_bottom_-4rem] 
+                    hover:bg-[center_bottom_-7rem] transition-all duration-300 
                     hover:bg-black hover:text-white"
                     onClick={() => {
                         setInGame(true);
                     }}
                 >
                     Play
-                </button>
+                </div>
             </div>
         </div>
     ) : (
