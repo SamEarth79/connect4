@@ -52,7 +52,7 @@ const Main = () => {
         <div className="flex flex-col items-center h-screen justify-end p-32 gap-10 relative">
             <div className="flex items-center gap-4 absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2">
                 <div className="flex gap-2 connect_parent">
-                    <h1 className="connect text-[4.5rem] font-light translate-x-[5em] max-sm:text-[2.5rem]">
+                    <h1 className="connect text-[4.5rem] font-light translate-x-[5em] max-sm:text-[2rem] whitespace-nowrap">
                         Connect 4
                     </h1>
                 </div>
@@ -91,7 +91,7 @@ const Main = () => {
                 <div
                     className="play-button border-2 mt-4 text-white text-2xl font-semibold tracking-[0.2rem] rounded-full p-3 w-full text-center bg-redyellow-pattern bg-[length:732px_753px] bg-no-repeat bg-[center_bottom_-4rem] 
                     hover:bg-[center_bottom_-7rem] transition-all duration-300 
-                    hover:bg-black hover:text-white"
+                    hover:bg-black hover:text-white cursor-pointer"
                     onClick={() => {
                         setInGame(true);
                     }}

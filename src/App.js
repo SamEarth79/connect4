@@ -1,5 +1,6 @@
 import Main from "./pages/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Game from "./pages/Game";
 function App() {
     return (
         // <>
@@ -9,7 +10,8 @@ function App() {
         //         </Routes>
         //     </Router>
         // </>
-        <Main />
+        // <Main />
+        <Game player1Name="sam" player2Name="rey" setInGame="true" />
     );
 }
 

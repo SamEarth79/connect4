@@ -93,14 +93,16 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
     const gsapAnimations = (playerTurn, [status, ...coords]) => {
         let winPlayer = 1;
         if (playerTurn === -1) winPlayer = 2;
-        document.querySelector(
-            ".result"
-        ).innerHTML = `Player ${winPlayer} wins`;
+
+        if (winPlayer === 1)
+            document.querySelector(".winner-card-1").classList.toggle("hidden");
+        else
+            document.querySelector(".winner-card-2").classList.toggle("hidden");
 
         gsap.fromTo(
-            ".result",
-            { y: -400, duration: 2, opacity: 0 },
-            { y: 0, opacity: 1 }
+            ".winner-card",
+            { y: 200, opacity: 0, ease: "back" },
+            { y: 0, opacity: 1, ease: "back", duration: 2 }
         );
 
         coords.forEach((coord) => {
@@ -113,6 +115,17 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 { y: 0, delay: 0.5 }
             );
         });
+
+        setTimeout(() => {
+            if (winPlayer === 1)
+                document
+                    .querySelector(".winner-card-1")
+                    .classList.toggle("hidden");
+            else
+                document
+                    .querySelector(".winner-card-2")
+                    .classList.toggle("hidden");
+        }, 3000);
     };
 
     const modifyCell = async (indexY, playerTurn) => {
@@ -198,10 +211,10 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
         }
     };
     return (
-        <div className="h-screen flex flex-col justify-around">
+        <div className="h-screen w-screen flex flex-col justify-around">
             <Header setInGame={setInGame} />
             <div className="game-section">
-                <div className="board flex items-center justify-center border-2 rounded-lg p-4 w-fit mx-auto ">
+                <div className="board flex items-center justify-center border-2 rounded-lg p-4 max-sm:mx-1 lg:w-fit mx-auto ">
                     {board.map((row, indexY) => {
                         return (
                             <div
@@ -222,7 +235,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                                             key={indexX + "" + indexY}
                                             className={`${cellColor} _${
                                                 indexX + "" + indexY
-                                            } aspect-square h-[3.5rem] m-[.8rem] max-sm:h-[2.5rem] max-sm:m-[.5rem] rounded-full`}
+                                            } aspect-square h-[3.5rem] m-[.8rem] max-sm:h-[2rem] max-sm:m-[.4rem] rounded-full`}
                                         ></div>
                                     );
                                 })}
@@ -252,6 +265,20 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                             {player2Name}
                         </p>
                     </div>
+                </div>
+            </div>
+            <div className="winner-card-1 hidden fixed top-0 left-0 w-full h-screen bg-black/60">
+                <div className="bg-white winner-card px-20 py-10 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+                    <h1 className="text-3xl max-sm:text-xl whitespace-nowrap font-semibold tracking-wider">
+                        Player 1 wins
+                    </h1>
+                </div>
+            </div>
+            <div className="winner-card-2 hidden fixed top-0 left-0 w-full h-screen bg-black/60">
+                <div className="bg-white winner-card px-20 py-10 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+                    <h1 className="text-3xl max-sm:text-xl whitespace-nowrap font-semibold tracking-wider">
+                        Player 2 wins
+                    </h1>
                 </div>
             </div>
         </div>
