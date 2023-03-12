@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/connect4/static/css/main.27d49286.css",
-    "main.js": "/connect4/static/js/main.a9d532e5.js",
+    "main.css": "/connect4/static/css/main.0f00efd9.css",
+    "main.js": "/connect4/static/js/main.a84677ae.js",
     "static/media/redyellow.jpeg": "/connect4/static/media/redyellow.6bcb0de413efba4984b4.jpeg",
     "index.html": "/connect4/index.html",
-    "main.27d49286.css.map": "/connect4/static/css/main.27d49286.css.map",
-    "main.a9d532e5.js.map": "/connect4/static/js/main.a9d532e5.js.map"
+    "main.0f00efd9.css.map": "/connect4/static/css/main.0f00efd9.css.map",
+    "main.a84677ae.js.map": "/connect4/static/js/main.a84677ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.27d49286.css",
-    "static/js/main.a9d532e5.js"
+    "static/css/main.0f00efd9.css",
+    "static/js/main.a84677ae.js"
   ]
 }
