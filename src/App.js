@@ -10,8 +10,8 @@ function App() {
         //         </Routes>
         //     </Router>
         // </>
-        // <Main />
-        <Game player1Name="sam" player2Name="rey" setInGame="true" />
+        <Main />
+        // <Game player1Name="sam" player2Name="rey" setInGame="true" />
     );
 }
 
