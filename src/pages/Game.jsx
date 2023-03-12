@@ -125,7 +125,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                 document
                     .querySelector(".winner-card-2")
                     .classList.toggle("hidden");
-        }, 3000);
+        }, 4000);
     };
 
     const modifyCell = async (indexY, playerTurn) => {
@@ -247,7 +247,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
             <div className="Footer">
                 <div className="flex gap-20 max-sm:gap-10 justify-center items-center">
                     <div className="flex items-center">
-                        <p className="text-xl font-semibold pl1 underline underline-offset-8">
+                        <p className="text-xl font-semibold max-sm:text-base whitespace-nowrap pl1 underline underline-offset-8">
                             {player1Name}
                         </p>
                         <div className="bg-red-500 aspect-square h-[3.5rem] m-[.8rem] rounded-full flex justify-center items-center font-mono font-bold text-xl">
@@ -261,21 +261,21 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
                         <div className="bg-yellow-500 aspect-square h-[3.5rem] m-[.8rem] rounded-full flex justify-center items-center font-mono font-bold text-xl">
                             {p2Score}
                         </div>
-                        <p className="text-xl font-semibold pl2">
+                        <p className="text-xl font-semibold pl2 max-sm:text-base whitespace-nowrap">
                             {player2Name}
                         </p>
                     </div>
                 </div>
             </div>
             <div className="winner-card-1 hidden fixed top-0 left-0 w-full h-screen bg-black/60">
-                <div className="bg-white winner-card px-20 py-10 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+                <div className="bg-red-500 text-white winner-card px-20 py-10 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
                     <h1 className="text-3xl max-sm:text-xl whitespace-nowrap font-semibold tracking-wider">
                         Player 1 wins
                     </h1>
                 </div>
             </div>
             <div className="winner-card-2 hidden fixed top-0 left-0 w-full h-screen bg-black/60">
-                <div className="bg-white winner-card px-20 py-10 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+                <div className="bg-yellow-400 text-white winner-card px-20 py-10 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
                     <h1 className="text-3xl max-sm:text-xl whitespace-nowrap font-semibold tracking-wider">
                         Player 2 wins
                     </h1>
