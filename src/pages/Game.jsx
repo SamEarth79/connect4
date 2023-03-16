@@ -211,7 +211,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
         }
     };
     return (
-        <div className="h-screen w-screen flex flex-col justify-around">
+        <div className="h-screen w-screen flex flex-col justify-around bg-gradient-to-r from-red-50 to-yellow-50">
             <Header setInGame={setInGame} />
             <div className="game-section">
                 <div className="board flex items-center justify-center border-2 rounded-lg p-4 max-sm:mx-1 lg:w-fit mx-auto ">
