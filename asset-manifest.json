@@ -1,14 +1,22 @@
 {
   "files": {
-    "main.css": "/connect4/static/css/main.9df3cef1.css",
-    "main.js": "/connect4/static/js/main.a1e0850d.js",
+    "main.css": "/connect4/static/css/main.cfa008cf.css",
+    "main.js": "/connect4/static/js/main.6e3ed56b.js",
+    "static/js/227.82955318.chunk.js": "/connect4/static/js/227.82955318.chunk.js",
+    "static/js/526.92b2d719.chunk.js": "/connect4/static/js/526.92b2d719.chunk.js",
+    "static/js/232.c2f22bf8.chunk.js": "/connect4/static/js/232.c2f22bf8.chunk.js",
+    "static/js/237.c9915dc8.chunk.js": "/connect4/static/js/237.c9915dc8.chunk.js",
     "static/media/redyellow.jpeg": "/connect4/static/media/redyellow.6bcb0de413efba4984b4.jpeg",
     "index.html": "/connect4/index.html",
-    "main.9df3cef1.css.map": "/connect4/static/css/main.9df3cef1.css.map",
-    "main.a1e0850d.js.map": "/connect4/static/js/main.a1e0850d.js.map"
+    "main.cfa008cf.css.map": "/connect4/static/css/main.cfa008cf.css.map",
+    "main.6e3ed56b.js.map": "/connect4/static/js/main.6e3ed56b.js.map",
+    "227.82955318.chunk.js.map": "/connect4/static/js/227.82955318.chunk.js.map",
+    "526.92b2d719.chunk.js.map": "/connect4/static/js/526.92b2d719.chunk.js.map",
+    "232.c2f22bf8.chunk.js.map": "/connect4/static/js/232.c2f22bf8.chunk.js.map",
+    "237.c9915dc8.chunk.js.map": "/connect4/static/js/237.c9915dc8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9df3cef1.css",
-    "static/js/main.a1e0850d.js"
+    "static/css/main.cfa008cf.css",
+    "static/js/main.6e3ed56b.js"
   ]
 }
