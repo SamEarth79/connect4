@@ -50,7 +50,7 @@ const Main = () => {
     }, [inGame]);
 
     return !inGame ? (
-        <div className="overflow-x-hidden bg-gradient-to-r from-red-50 to-yellow-50">
+        <div className="overflow-x-hidden h-screen bg-gradient-to-tr from-red-50 to-yellow-50">
             <div className="flex flex-col items-center h-screen justify-end p-32 gap-10 relative">
                 <div className="flex items-center gap-4 absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2">
                     <div className="flex gap-2 connect_parent">
@@ -102,11 +102,11 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-0 -translate-y-[8rem] left-0 -translate-x-1/2 bg-yellow-200">
+            <div className="absolute bottom-0 -translate-y-[0rem] left-0 -translate-x-1/2">
                 {/* <Spline scene="https://prod.spline.design/3oD2qRA3YSrqy0Dc/scene.splinecode" /> */}
                 <Spline scene="https://prod.spline.design/xsc0wrEoASSFCpVs/scene.splinecode" />
             </div>
-            <div className="absolute top-0 -translate-y-[8rem] right-0 translate-x-1/2">
+            <div className="absolute top-0 -translate-y-[0rem] right-0 translate-x-1/2">
                 <Spline scene="https://prod.spline.design/Cka7e3BTAPBAXReV/scene.splinecode" />
             </div>
         </div>
