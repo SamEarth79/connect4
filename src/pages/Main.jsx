@@ -102,11 +102,12 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2">
-                <Spline scene="https://prod.spline.design/Cka7e3BTAPBAXReV/scene.splinecode" />
+            <div className="absolute bottom-0 -translate-y-[8rem] left-0 -translate-x-1/2 bg-yellow-200">
+                {/* <Spline scene="https://prod.spline.design/3oD2qRA3YSrqy0Dc/scene.splinecode" /> */}
+                <Spline scene="https://prod.spline.design/xsc0wrEoASSFCpVs/scene.splinecode" />
             </div>
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2">
-                <Spline scene="https://prod.spline.design/3oD2qRA3YSrqy0Dc/scene.splinecode" />
+            <div className="absolute top-0 -translate-y-[8rem] right-0 translate-x-1/2">
+                <Spline scene="https://prod.spline.design/Cka7e3BTAPBAXReV/scene.splinecode" />
             </div>
         </div>
     ) : (
