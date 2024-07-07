@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Game from "./Game";
 import Spline from "@splinetool/react-spline";
+import githubIcon from "../github-mark/github-mark.svg"
 
 const Main = () => {
     const [player1Name, setPlayer1Name] = useState("Player 1");
@@ -100,6 +101,10 @@ const Main = () => {
                     >
                         Play
                     </div>
+                    <div className="flex justify-center items-center gap-2 relative top-10">
+                        <h2>Made by, <span className="font-semibold">Samarth M</span></h2>
+                        <img onClick={() => window.open("https://github.com/SamEarth79/connect4", "_blank")} src={githubIcon} alt="" className="w-8 aspect-square cursor-pointer" />
+                    </div>
                 </div>
             </div>
             <div className="absolute bottom-0 -translate-y-[0rem] left-0 -translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2">
@@ -110,6 +115,7 @@ const Main = () => {
                 <Spline scene="https://prod.spline.design/Cka7e3BTAPBAXReV/scene.splinecode" />
             </div>
         </div>
+        
     ) : (
         <Game
             player1Name={player1Name}

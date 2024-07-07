@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             backgroundImage: {
                 "redyellow-pattern": "url('/public/redyellow.jpeg')",
+                "github-icon": "url('/public/github-mark/github-mark-white.png'"
             },
         },
     },
