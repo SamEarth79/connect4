@@ -128,6 +128,14 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
         }, 4000);
     };
 
+    const coinDropGsapAnimations = (indexY, indexX) => {
+        gsap.fromTo(
+            "._" + indexX + "" + indexY,
+            {y: (indexX+1)*(-100), opacity: 0},
+            {y: 0, opacity: 1, duration: 0.7, ease: ""}
+        )
+    }
+
     const modifyCell = async (indexY, playerTurn) => {
         if (disable) {
             // alert("disabled");
@@ -135,11 +143,13 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
         }
         console.log("-----");
         // console.log(`${indexX} ${indexY}`);
+        let indexX=0;
         const updatedBoard = board.map((row, index_y) => {
             if (indexY === index_y) {
                 let i = boardYSize - 1;
                 while (i > 0 && row[i] !== 0) i--;
                 row[i] = playerTurn;
+                indexX = i;
                 return row;
                 // return row.map((cell, index_x) => {
                 //     if (indexX === index_x) return playerTurn;
@@ -150,6 +160,7 @@ const Game = ({ player1Name, player2Name, setInGame }) => {
 
         console.log(updatedBoard);
         setBoard(updatedBoard);
+        coinDropGsapAnimations(indexY, indexX);
         let foundWinner = false;
         for (let iy = 0; iy < boardXSize; iy++) {
             for (let ix = 0; ix < boardYSize; ix++) {
