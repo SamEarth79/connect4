@@ -35,14 +35,14 @@ const Main = () => {
 
         gsap.fromTo(
             ".player-names",
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, delay: 1.5, duration: 1.5 }
+            { opacity: 0 },
+            { opacity: 1, delay: 1.5, duration: 1.5 }
         );
 
         gsap.fromTo(
             ".play-button",
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, delay: 2, duration: 1.5 }
+            { opacity: 0 },
+            { opacity: 1, delay: 2, duration: 1.5 }
         );
     };
 
