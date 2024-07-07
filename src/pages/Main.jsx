@@ -102,8 +102,7 @@ const Main = () => {
                         Play
                     </div>
                     <div className="flex justify-center items-center gap-2 relative top-10">
-                        <h2>Made by, <span className="font-semibold">Samarth M</span></h2>
-                        <img onClick={() => window.open("https://github.com/SamEarth79/connect4", "_blank")} src={githubIcon} alt="" className="w-8 aspect-square cursor-pointer" />
+                        <h2>Made by, <span className="font-semibold cursor-pointer underline underline-offset-2" onClick={() => window.open("https://github.com/SamEarth79/connect4", "_blank")}>Samarth M</span></h2>
                     </div>
                 </div>
             </div>
