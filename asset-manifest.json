@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/connect4/static/css/main.93bff5a5.css",
-    "main.js": "/connect4/static/js/main.c9ac095c.js",
+    "main.js": "/connect4/static/js/main.84f7ed48.js",
     "static/js/227.82955318.chunk.js": "/connect4/static/js/227.82955318.chunk.js",
     "static/js/526.92b2d719.chunk.js": "/connect4/static/js/526.92b2d719.chunk.js",
     "static/js/232.c2f22bf8.chunk.js": "/connect4/static/js/232.c2f22bf8.chunk.js",
@@ -10,7 +10,7 @@
     "static/media/github-mark.svg": "/connect4/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "index.html": "/connect4/index.html",
     "main.93bff5a5.css.map": "/connect4/static/css/main.93bff5a5.css.map",
-    "main.c9ac095c.js.map": "/connect4/static/js/main.c9ac095c.js.map",
+    "main.84f7ed48.js.map": "/connect4/static/js/main.84f7ed48.js.map",
     "227.82955318.chunk.js.map": "/connect4/static/js/227.82955318.chunk.js.map",
     "526.92b2d719.chunk.js.map": "/connect4/static/js/526.92b2d719.chunk.js.map",
     "232.c2f22bf8.chunk.js.map": "/connect4/static/js/232.c2f22bf8.chunk.js.map",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.93bff5a5.css",
-    "static/js/main.c9ac095c.js"
+    "static/js/main.84f7ed48.js"
   ]
 }
